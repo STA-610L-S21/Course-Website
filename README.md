@@ -1,7 +1,7 @@
 # Website
-Website for "STA 602L - Bayesian and Modern Statistics" at Duke University, for Spring 2021.
+Website for "STA 610L - Multilevel and Hierarchical Models" at Duke University, for Spring 2021.
 
-Course website is at https://sta-602l-s21.github.io/Course-Website/
+Course website is at https://sta-610l-s21.github.io/Course-Website/
 
 # Attribution
 
