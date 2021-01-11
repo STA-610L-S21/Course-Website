@@ -6,8 +6,9 @@ markup: "mmark"
 ### Supplementary Textbooks
 
 These textbooks are great resources for some of the topics we will cover. You do not need to buy them, but you may be able to borrow them from Duke library should you need extra reading materials, besides the class slides and main textbooks.
-1. [Albert, J. (2009), "Bayesian Computation with R (Second Edition)."](https://www.amazon.com/Bayesian-Computation-R-Use/dp/0387922970)
-2. [Bolstad, W. M. and Curran, J. M. (2016), "Introduction to Bayesian Statistics (Third Edition)."](https://www.amazon.com/Introduction-Bayesian-Statistics-William-Bolstad/dp/1118091566)
+1. [Bayesian Data Analysis (Third Edition) by Andrew Gelman, John Carlin, Hal Stern, David Dunson, Aki Vehtari, and Donald Rubin.](https://find.library.duke.edu/catalog/DUKE006588051?utm_campaign=bento&utm_content=bento_result_link&utm_source=library.duke.edu&utm_medium=referral)
+2. [Introduction to multilevel modeling using rstanarm: A tutorial for education researchers.](https://mc-stan.org/users/documentation/case-studies/tutorial_rstanarm.html)
+3. [Albert, J. (2009), "Bayesian Computation with R (Second Edition)."](https://www.amazon.com/Bayesian-Computation-R-Use/dp/0387922970)
 
 ### R and R Markdown Resources
 
@@ -19,7 +20,7 @@ R Markdown can be used to create high quality reports and presentations with emb
 4. [R Markdown Cheat Sheet](https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf)
 5. [Data Visualization with ggplot2 Cheat Sheet](https://www.rstudio.com/wp-content/uploads/2016/11/ggplot2-cheatsheet-2.1.pdf)
 6. [Other Useful Cheat Sheets](https://www.rstudio.com/resources/cheatsheets/#import)
-7. [A very (very!) basic R Markdown template](https://sta-602l-s20.github.io/Course-Website/labs/resources/LabReport.Rmd)
+7. [A very (very!) basic R Markdown template](https://sta-610l-s21.github.io/Course-Website/labs/resources/LabReport.Rmd)
 
 ### LaTeX
 
@@ -27,13 +28,3 @@ You may also use LaTeX to type up your assignments. You may find it easier to cr
 
 1. [Learn LaTeX in 30 minutes](https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes)
 2. [Choosing a LaTeX Compiler](https://www.overleaf.com/learn/latex/Choosing_a_LaTeX_Compiler).
-
-### Interesting Articles
-
-I will add articles I find interesting below. These are articles I find useful as supplementary readings for topics covered in class, or as good sources that cover concepts I think you should know, but which we may not have time to cover. I strongly suggest you find time to (at the very least) take a "quick peek" at each article.
-
-1. Efron, B., 1986. Why isn't everyone a Bayesian?. The American Statistician, 40(1), pp. 1-5.
-2. Gelman, A., 2008. Objections to Bayesian statistics. Bayesian Analysis, 3(3), pp. 445-449.
-3. Diaconis, P., 1977. Finite forms of de Finetti's theorem on exchangeability. Synthese, 36(2), pp. 271-281.
-4. Gelman, A., Meng, X. L. and Stern, H., 1996. Posterior predictive assessment of model fitness via realized discrepancies. Statistica sinica, pp. 733-760.
-5. Dunson, D. B., 2018. Statistics in the big data era: Failures of the machine. Statistics & Probability Letters, 136, pp. 4-9.

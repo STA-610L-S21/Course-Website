@@ -7,7 +7,8 @@ markup: "mmark"
 
 
 ### Prerequisites
-ALL students are expected to be familiar with all the topics covered within the required prerequisites to be in this course. That is, STA 611 or the following: STA 210 and (STA 230 or 240L) and (MATH 202, 202D, 212, or 222) and (MATH 216, 218, or 221, any of which may be taken concurrently). Students are also expected to be very familiar with R and are encouraged to have learned LaTeX or a Markdown language by the end of the course.
+
+ALL students are expected to be familiar with all the topics covered within the required prerequisites to be in this course. That is, courses covering linear and matrix algebra and STA 360 or 601 or 602L. Students are also expected to be very familiar with R and are encouraged to have learned LaTeX or a Markdown language by the end of the course.
 
 ### Workload
 
@@ -15,63 +16,57 @@ Work hours will include time spent going through the preassigned readings, watch
 
 ### Graded Work
 
-Graded work for the course will consist of problem sets, lab exercises, two quizzes, a midterm exam and a final exam. Regrade requests for problem sets and lab exercises must be done via Gradescope AT MOST **24 hours** after grades are released! Regrade requests for quizzes, midterm, and final exams must be done via Gradescope AT MOST  **12 hours** after grades are released! **Always write in complete sentences and show all of your steps.**
+Graded work for the course will consist of problem sets, lab exercises, two case studies and two exams. Regrade requests for problem sets, lab exercises and case studies must be done via Gradescope AT MOST **24 hours** after grades are released! Regrade requests for the exams must be done via Gradescope AT MOST  **12 hours** after grades are released! **Always write in complete sentences and show all of your steps.**
 
 Students' final grades will be determined as shown below:
 
 {.table .table-condensed .table-striped .text-left}
 Component             | Percentage
 ----------------------|----------------
-Final Exam | 25%
-Midterm | 20%
+Lab Exercises & Overall Participation | 10%\
+Group Case Study I | 10%
+Group Case Study II | 15%
 Problem Sets | 20%
-Quiz I | 10%
-Quiz II | 10%
-Lab exercises | 10%
-Participation Quizzes | 5%
+Exam I | 22.5%
+Exam II | 22.5%
 
 There are no make-ups for any of the graded work except for medical or familial emergencies or for reasons approved by the instructor BEFORE the due date. See the instructor in advance of relevant due dates to discuss possible alternatives. 
 	
-Grades **may** be curved at the end of the semester. Cumulative averages of 90% -- 100% are guaranteed at least an A-, 80% -- 89% at least a B-, and 70% -- 79% at least a C-, however the exact ranges for letter grades will be determined after the final exam.
-
-**If grades are curved, grades for students in STA 360 will be curved differently in comparison to the grades for students in STA 602.**
+Grades **may** be curved at the end of the semester. Cumulative averages of 90% -- 100% are guaranteed at least an A-, 80% -- 89% at least a B-, and 70% -- 79% at least a C-, however the exact ranges for letter grades will be determined at the end of the course.
 
 
 ### Descriptions of graded work
 
-#### Problem sets and lab exercises
-Problem sets will be handed out on a weekly basis. They will be based on both the lectures and labs and will be announced every Thursday or Friday -- be sure to check the website regularly!  **Also, please note that any work that is not legible by the instructor or TAs will not be graded (given a score  of 0). Every write-up must be clearly written in full sentences and clear English. Any assignment that is completely unclear to the instructors and/or TAs, may result in a grade of a 0.** For programming exercises, you are required to use R and you must submit ALL of the code as an appendix.  
+#### Problem sets
+Four problem sets will be handed out over the course of the semester. These problem sets are to be completed independently without collaborating with other students. Be sure to check the website regularly for the dates and deadlines! **Please note that any work that is not legible by the instructor or TAs will not be graded (given a score  of 0). Every write-up must be clearly written in full sentences and clear English. Any assignment that is completely unclear to the instructors and/or TAs, may result in a grade of a 0.** For programming exercises, you are required to use R and you must submit ALL of the code as an appendix.  
 
-Each student MUST write up and turn in her or his own answers. You are encouraged to talk to each other regarding homework problems or to the instructor/TA. However, the write-up, solution, and code must be entirely your own work. The assignments must be submitted on [Gradescope](https://www.gradescope.com/courses/190490/assignments) under ``Assignments''. Note that you will not be able to make online submissions after the due date, so be sure to submit before or by the Gradescope-specified deadline.
+Each student MUST write up and turn in her or his own answers. You are encouraged to talk to each other regarding homework problems or to the instructor/TA. However, the write-up, solution, and code must be entirely your own work. The assignments must be submitted on [Gradescope](https://www.gradescope.com/courses/224715/assignments) under ``Assignments''. Note that you will not be able to make online submissions after the due date, so be sure to submit before or by the Gradescope-specified deadline.
 
-Solutions will be curated from student solutions with proper attribution. Every week the TAs will select a representative correct solution for the assigned problems and put them together into one solutions set with each answer being attributed to the student who wrote it. **If you would like to OPT OUT of having your homework solutions used for the class solutions, please let the Instructor and TAs know in advance.**
+Solutions will be curated from student solutions with proper attribution. For each problem set, the TAs will select a representative correct solution for the assigned problems and put them together into one solutions set with each answer being attributed to the student who wrote it. **If you would like to OPT OUT of having your solutions used for the class solutions, please let the Instructor and TAs know in advance.**
 
-**Finally, your lowest homework score will be dropped!**
 
 #### Lab exercises
-The objective of the lab assignments is to give you more hands-on experience with Bayesian data analysis. Join the live session or watch the recorded videos and learn a concept or two and some R from the TAs, and then work on the computational part of the problem sets. Each lab assignment should be submitted in timely fashion. You are REQUIRED to use R Markdown to type up your lab reports.
+The objective of the lab assignments is to give you more hands-on experience with hierarchical data analysis. Join the live sessions or watch the recorded videos and learn a concept or two and some R from the TAs, and then work on the computational part of the problem sets. Each lab assignment should be submitted in timely fashion. You are REQUIRED to use R Markdown to type up your lab reports.
 
-#### Quizzes
-There will be two quizzes, both timed and online. Students will be able to take the quiz within **any one-hour slot in a 24-hour window**. Detailed instructions on the quizzes will be made available later.
+#### Group Case Studies
+There will be detailed analysis of two case studies using current, relevant data. Each case study will involve a final submission per team.
+Each team will create/record video presentations of their findings to be viewed by the other teams, and also turn in written reports. You must participate in each video presentation to receive full credit for that group case study. Individual contributions to each submission will also be assessed. Team members must provide these assessments in order to receive credit for an assignment. An individual team member’s grade may be modified if assessments indicate this is appropriate. Additional details on the case studies will be made available later.
 
-#### Midterm Exam
-There will be a midterm exam mid-semester.  Students will be able to take the midterm within **any two-hour slot in a 24-hour window**.  Soon after the midterm, you will be given a midterm grade assessing your overall performance. Note that the main purpose of this is to let you know how you are doing in the class. Detailed instructions on the midterm will be made available later.
-
-#### Final Exam
-There will be a final exam after the reading week. If you miss any quiz or the midterm, your grade will depend more on the final exam score since there are no make-up exams. You cannot miss the final exam! Students will be able to take the final within **any three-hour slot in a 48-hour window**. Detailed instructions on the final will be made available later.
+#### Final Exams
+There will be two exams as specified on the syllabus and schedule. If you know in advance you must miss an examination, please contact the instructor as soon as possible. Detailed instructions will be made available later.
 
 
 ### Late Submission Policy
 
 - You will lose
-  + 40% of the total points on each problem set if you submit within the first 24 hours after it is due, and
+  + 40% of the total points on each problem set or case studies if you submit within the first 24 hours after it is due, and
   + 100% of the total points if you submit later than that.
 	
 	In addition, you will lose
 	+ 50% of the total points on each lab exercise if you submit within the first 24 hours after it is due, and
 	+ 100% of the total points if you submit later than that.
 	
-- You will lose 100% of the total points on quizzes, midterms and final exams if you miss the dates/times.
+- You will lose 100% of the total points on exams if you miss the dates/times.
 
 
 ### Auditing

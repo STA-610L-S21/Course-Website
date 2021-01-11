@@ -1,7 +1,7 @@
 baseurl = "/"
 languageCode = "en-us"
 defaultContentLanguage = "en-us"
-title = "STA 602L: SPRING 2021"
+title = "STA 610L: SPRING 2021"
 theme = "material"
 #disqusShortname = ""
 # googleAnalytics = ""
@@ -65,7 +65,7 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
   identifier = "gradescope"
   name = "Gradescope"
   pre = "<i class=\"material-icons\">assignment</i>"
-  url = "https://www.gradescope.com/courses/190490/assignments"
+  url = "https://www.gradescope.com/courses/224715/assignments"
   
 
 [[menu.footer]]
@@ -90,11 +90,11 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
   identifier = "GitHub"
   name = "GitHub"
   pre = "<i class=\"button-icon fa fa-2x fa-github\"></i>"
-  url = "https://github.com/STA-602L-S21"
+  url = "https://github.com/STA-610L-S21"
 [[menu.footer]]
 
 
 [params]
   dateFormat = "January 2, 2006"
-  background = "https://akandelanre.github.io./img/STA 602L Spring_2021_background_image.png" 
+  background = "https://akandelanre.github.io./img/STA 610L Spring_2021_background_image.png" 
   #favicon = "https://akandelanre.github.io./mids_duke_logo.png"
