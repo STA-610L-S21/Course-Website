@@ -1,5 +1,5 @@
 ---
-title: "STA 360/602L: Module 0.0"
+title: "STA 610L: Module 0.0"
 subtitle: "Template"
 author: "Dr. Olanrewaju Michael Akande"
 date: " "

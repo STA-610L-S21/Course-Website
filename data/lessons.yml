@@ -12,8 +12,9 @@ lessons:
     #slides: "1-1-course-overview.html"
     #slidespdf: "1-1-course-overview.pdf"
     
-  - title: "Module 1.2: Review"
-    #reading: "1-2-reading.html"
+  - title: "Module 1.2: Review materials"
+    reading: "1-2-reading.html"
+    #slides: "1-2-review-6.html"
     #slides: "1-2-course-overview.html"
     #slidespdf: "1-2-course-overview.pdf"
     
