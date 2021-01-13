@@ -8,15 +8,14 @@ lessons:
   - week: "WEEK 1"
     date: "Fri, Jan 22"
     title: "Module 1.1: Course overview and introduction"
-    #reading: "1-1-reading.html"
     #slides: "1-1-course-overview.html"
     #slidespdf: "1-1-course-overview.pdf"
     
-  - title: "Module 1.2: Review materials"
-    reading: "1-2-reading.html"
+  - title: "Module 1.2: Review"
+    #reading: "1-2-reading.html"
     #slides: "1-2-review-6.html"
-    #slides: "1-2-course-overview.html"
-    #slidespdf: "1-2-course-overview.pdf"
+    slides: "1-2-review.html"
+    #slidespdf: "1-2-review.pdf"
     
     
   - title: " "
