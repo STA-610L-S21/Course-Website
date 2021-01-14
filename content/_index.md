@@ -61,7 +61,7 @@ The easiest way for you to join the different Zoom meetings is to log in to Saka
 ------------------|-------------------|------------------|------------------|------------------ 
 Instructor        | [Dr. Olanrewaju Michael Akande](https://akandelanre.github.io.) | <a href="mailto:olanrewaju.akande@duke.edu" title="email"><i class="fa fa-envelope"></i></a> &nbsp; <a href="https://github.com/akandelanre" title="GitHub"><i class="fa fa-github"></i></a> | Tuesdays: 6:00pm - 7:00pm <br /> Fridays: 9:00am - 10:00am | Zoom Meeting ID: **See Sakai**
 TA               | [Jiurui Tang](https://scholars.duke.edu/person/jiurui.tang) | <a href="mailto:jiurui.tang@duke.edu" title="email"><i class="fa fa-envelope"></i></a> | Mondays: 9:00am - 10:00am <br /> Wednesdays: 5:00pm - 7:00pm | Zoom Meeting ID: **See Sakai**
-                 | [Meng (Amy) Xie](https://scholars.duke.edu/person/meng.xie) | <a href="mailto:meng.xie@duke.edu" title="email"><i class="fa fa-envelope"></i></a> | Times TBD | Zoom Meeting ID: **See Sakai**
+                 | [Meng (Amy) Xie](https://scholars.duke.edu/person/meng.xie) | <a href="mailto:meng.xie@duke.edu" title="email"><i class="fa fa-envelope"></i></a> | Tuesdays: 4:00pm - 5:00pm <br /> Thursdays: 3:00pm - 5:00pm | Zoom Meeting ID: **See Sakai**
 
 
 ### Texts

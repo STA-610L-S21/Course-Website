@@ -69,7 +69,6 @@ Review slides are provided for linear algebra as well as some probability and in
 
 Penn State University maintains some very nice review materials online (these are shorter in length than the slides above.)
 
-
 [Matrix definitions](https://onlinecourses.science.psu.edu/statprogram/reviews/matrix-algebra/definitions)
 
 [Matrix arithmetic](https://onlinecourses.science.psu.edu/statprogram/reviews/matrix-algebra/arithmetic)
