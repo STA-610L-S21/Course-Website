@@ -93,6 +93,14 @@ Fri, April 23 | Classes end
 
 
 
+### Wellness day
+
+In lieu of a traditional class meeting on April 12, 2021, please use our regular class time to engage in reflection and wellness endeavors. A list of wellness strategies and programs is available at https://studentaffairs.duke.edu/duwell/wellness-day-2021.
+
+Although the goal of Wellness Day 2021 is to provide time and space to engage in activities that enhance your well-being, please remember that wellness isn’t achieved in one day.  Learning to balance your personal, professional, and academic commitments is a skill that should be practiced regularly and over time.
+
+
+
 
 ### Green Classroom
 
