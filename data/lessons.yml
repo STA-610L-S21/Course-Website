@@ -9,21 +9,18 @@ lessons:
     date: "Wed, Jan 20"
     title: "Module 1.1: Course overview and introduction"
     slides: "1-1-course-overview.html"
-    #slidespdf: "1-1-course-overview.pdf"
     
   - date: "Fri, Jan 22"
     title: "Module 1.2: Review"
     slides: "1-2-review.html"
-    #slidespdf: "1-2-review.pdf"
     
   - title: "Module 1.3: Introduction to hierarchical models"
-    #reading: "1-3-reading.html"
     slides: "1-3-intro.html"
     slidespdf: "1-3-intro.pdf"
     
   - title: "Module 1.4: Introduction to hierarchical models (short activity)"
-    #slides: "1-4-intro-activity.html"
-    #slidespdf: "1-4-intro-activity.pdf"
+    slides: "1-4-intro-activity.html"
+    slidespdf: "1-4-intro-activity.pdf"
     
     
   - title: " "
@@ -33,8 +30,8 @@ lessons:
   
   - week: "WEEK 2"
     date: "Mon, Jan 25"
-    title: "Lab 1: "
-    #lab: "lab-01-.html"
+    title: "Lab 1: Help, these kids are killing me! (Part I)"
+    lab: "lab-01.html"
     
   - date: "Wed, Jan 27"
     title: "One way ANOVA: scalar and matrix formulations"
@@ -50,8 +47,8 @@ lessons:
   
   - week: "WEEK 3"
     date: "Mon, Feb 1"
-    title: "Lab 2: "
-    #lab: "lab-02-.html"
+    title: "Lab 2: Help, these kids are killing me! (Part II)"
+    #lab: "lab-02.html"
     
   - date: "Tue, Feb 2"
     title: "Drop/Add ends"
@@ -66,7 +63,7 @@ lessons:
   
   - week: "WEEK 4"
     date: "Mon, Feb 8"
-    title: "Lab 3: "
+    title: "Lab 3: Hospital Rankings (Part I)"
     #lab: "lab-03-.html"
   
   - date: "Wed, Feb 10"
@@ -86,7 +83,7 @@ lessons:
   
   - week: "WEEK 5"
     date: "Mon, Feb 15"
-    title: "Lab 4: "
+    title: "Lab 4: Hospital Rankings (Part II)"
     #lab: "lab-04-.html"
   
     
@@ -235,10 +232,10 @@ lessons:
     title: "Make-up day"
     
   - date: "Wed, Apr 21"
-    title: "Case Study I Presentations"
+    title: "Case Study II Presentations"
   
   - date: "Fri, Apr 23"
-    title: "Case Study I Presentations"
+    title: "Case Study II Presentations"
   
   
   - week: "WEEK 15"
