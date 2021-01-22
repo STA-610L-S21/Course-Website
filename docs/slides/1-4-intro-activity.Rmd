@@ -1,6 +1,6 @@
 ---
 title: "STA 610L: Module 1.4"
-subtitle: "Introduction to hierarchical models (short activity)"
+subtitle: "Short activity"
 author: "Dr. Olanrewaju Michael Akande"
 date: " "
 output:

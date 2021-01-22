@@ -18,9 +18,9 @@ lessons:
     slides: "1-3-intro.html"
     slidespdf: "1-3-intro.pdf"
     
-  - title: "Module 1.4: Introduction to hierarchical models (short activity)"
+  - title: "Module 1.4: Short activity"
     slides: "1-4-intro-activity.html"
-    slidespdf: "1-4-intro-activity.pdf"
+    #slidespdf: "1-4-intro-activity.pdf"
     
     
   - title: " "
