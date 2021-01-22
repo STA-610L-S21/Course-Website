@@ -35,12 +35,6 @@ library(rvest)
 
 
 
-## Demo
-
-For some intuition behind hierarchical models, we'll check out [this neat tutorial by Michael Freeman at University of Washington](http://mfviz.com/hierarchical-models/).
-
-
-
 
 ---
 ## Practice

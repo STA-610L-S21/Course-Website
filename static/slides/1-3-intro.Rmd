@@ -200,6 +200,14 @@ If the parameter $\beta_j>0$, then increasing levels of $x_j$ are associated wit
 $\beta_j=0$ is consistent with no association between $x_j$ and $y$.
 
 
+
+---
+## Hierarchical model: demo
+
+For some intuition behind hierarchical models, we'll check out [this neat tutorial by Michael Freeman at University of Washington](http://mfviz.com/hierarchical-models/).
+
+
+
 ---
 
 class: center, middle
