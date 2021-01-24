@@ -1,5 +1,5 @@
 ---
-title: "Module 1.2: Review materials"
+title: "Module 2.1: One way ANOVA: formulation and estimation"
 output: 
   html_document:
     css: reading.css
@@ -11,51 +11,18 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 
+## Required:
 
+- Lecture Notes on Hierarchical Modeling by Peter D. Hoff.:
+    + Section 2.1: Review of standard one-way ANOVA
 
-## Review on your own, as needed
+## Optional:
 
-Prerequisites for this course include STA 360/601/602 (Bayesian Inference) and all its prerequisite at Duke (linear algebra, multivariable calculus, probability, inference, and regression).
+- [Data Analysis Using Regression and Multilevel/Hierarchical Models](https://www.amazon.com/gp/product/052168689X/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=052168689X&linkCode=as2&tag=andrsblog0f-20&linkId=PX5B5V6ZPCT2UIYV) by Gelman A., and Hill, J.:
+    + Section 22.1: Classical analysis of variance
 
-Review slides are provided for linear algebra as well as some probability and inference material, including the following. Please familiarize yourself with the content of these notes if your recollection is fuzzy.
+- [Penn State University Materials for the Desgin of Experiments Course](https://online.stat.psu.edu/stat503/home):
+    + Section 3.1: Experiments with One Factor and Multiple Levels
 
-- basic properties of vectors and matrices
-- linear independence, dependence, and rank of a matrix
-- inversion of full-rank and less than full-rank matrices
-- common distributions
-- maximum likelihood estimation
-
-
-
-## Review slides
-
-[Basics: Vectors and matrices](https://ids-610l-s21.github.io/Course-Website/slides/1-2-review-1.html)
-
-[Linear dependence and rank](https://ids-610l-s21.github.io/Course-Website/slides/1-2-review-2.html)
-
-[Determinants and inverses](https://ids-610l-s21.github.io/Course-Website/slides/1-2-review-3.html)
-
-[Random vectors and matrices](https://ids-610l-s21.github.io/Course-Website/slides/1-2-review-4.html)
-
-[Important distributions](https://ids-610l-s21.github.io/Course-Website/slides/1-2-review-5.html)
-
-[Maximum likelihood](https://ids-610l-s21.github.io/Course-Website/slides/1-2-review-6.html)
-
-
-
-## Other review resources
-
-Penn State University maintains some very nice review materials online (these are shorter in length than the slides above.)
-
-
-[Matrix definitions](https://onlinecourses.science.psu.edu/statprogram/reviews/matrix-algebra/definitions)
-
-[Matrix arithmetic](https://onlinecourses.science.psu.edu/statprogram/reviews/matrix-algebra/arithmetic)
-
-[Matrix properties](https://onlinecourses.science.psu.edu/statprogram/reviews/matrix-algebra/properties)
-
-[Matrix inverse](https://onlinecourses.science.psu.edu/statprogram/reviews/matrix-algebra/inverse)
-
-[Advanced matrix properties](https://onlinecourses.science.psu.edu/statprogram/reviews/matrix-algebra/advanced-properties)
 
 

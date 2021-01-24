@@ -34,17 +34,20 @@ lessons:
     lab: "lab-01.html"
     
   - date: "Wed, Jan 27"
-    title: "Module 2.1: One way ANOVA: formulation and estimation"
-    #reading: "2-1-reading.html"
-    #slides: "2-1-anova-estimation.html"
-    #slidespdf: "2-1-anova-estimation.pdf"
+    title: "Module 2.1: One way ANOVA (formulation and estimation)"
+    reading: "2-1-reading.html"
+    slides: "2-1-anova-estimation.html"
+    slidespdf: "2-1-anova-estimation.pdf"
     
-  - title: "Module 2.2: One way ANOVA: step-down tests and matrix formulation"
-    #slides: "2-2-anova-matrix-formulation.html"
-    #slidespdf: "2-2-anova-matrix-formulation.pdf"
+  - title: "Module 2.2: One way ANOVA (step-down tests and matrix formulation)"
+    reading: "2-2-reading.html"
+    slides: "2-2-anova-matrix-formulation.html"
+    slidespdf: "2-2-anova-matrix-formulation.pdf"
     
   - date: "Fri, Jan 29"
-    title: "MLEs, contrasts, coding schemes, and interactions"
+    title: "Module 2.3: One way ANOVA (distribution of estimates and linear combinations)"
+    
+  - title: "Module 2.4: Multi-way ANOVA and interactions"
     
   - date: "NEW ASSIGNMENT:"
     title: "Homework 1"
