@@ -1,5 +1,5 @@
 ---
-title: "Module 2.1: One way ANOVA: formulation and estimation"
+title: "Module 2.1:  One way ANOVA (formulation and estimation)"
 output: 
   html_document:
     css: reading.css

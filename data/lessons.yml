@@ -46,8 +46,10 @@ lessons:
     
   - date: "Fri, Jan 29"
     title: "Module 2.3: One way ANOVA (distribution of estimates and linear combinations)"
+    reading: "2-3-reading.html"
     
   - title: "Module 2.4: Multi-way ANOVA and interactions"
+    reading: "2-4-reading.html"
     
   - date: "NEW ASSIGNMENT:"
     title: "Homework 1"

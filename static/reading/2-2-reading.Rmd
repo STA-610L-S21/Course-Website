@@ -1,5 +1,5 @@
 ---
-title: "Module 2.2: One way ANOVA: step-down tests and matrix formulation"
+title: "Module 2.2: One way ANOVA (step-down tests and matrix formulation)"
 output: 
   html_document:
     css: reading.css
@@ -10,6 +10,11 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+
+## Required:
+
+- Lecture Notes on Hierarchical Modeling by Peter D. Hoff.:
+    + Section 2.1: Review of standard one-way ANOVA
 
 ## Optional:
 

@@ -1,5 +1,5 @@
 ---
-title: "Module 2.2: One way ANOVA (step-down tests and matrix formulation)"
+title: "Module 2.3: One way ANOVA (distribution of estimates and linear combinations)"
 output: 
   html_document:
     css: reading.css
@@ -11,15 +11,11 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 
+
 ## Required:
 
 - Lecture Notes on Hierarchical Modeling by Peter D. Hoff.:
     + Section 2.1: Review of standard one-way ANOVA
-
-## Optional:
-
-- [Penn State University Materials for the Desgin of Experiments Course](https://online.stat.psu.edu/stat503/home):
-    + Section 3.3: Multiple Comparisons
-
+    + Section 3.2: Maximum likelihood estimation
 
 
