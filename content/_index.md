@@ -34,11 +34,16 @@ By the end of this course, students should be able to
 
 ##### Section 01:
 
+<font color="#6CA0DC"><i class="fas fa-user fa-lg"></i></font> &nbsp; **[Jiurui Tang](https://scholars.duke.edu/person/jiurui.tang)**
+
 <font color="#6CA0DC"><i class="fas fa-calendar-alt fa-lg"></i></font> &nbsp; **Mondays (12:00pm - 1:15pm)**
 
 <font color="#6CA0DC"><i class="fas fa-university fa-lg"></i></font> &nbsp; Zoom Meeting ID: **See Sakai**
 
+
 ##### Section 02:
+
+<font color="#6CA0DC"><i class="fas fa-user fa-lg"></i></font> &nbsp; **[Meng (Amy) Xie](https://scholars.duke.edu/person/meng.xie)**
 
 <font color="#6CA0DC"><i class="fas fa-calendar-alt fa-lg"></i></font> &nbsp; **Mondays (7:00pm - 8:15pm)**
 
