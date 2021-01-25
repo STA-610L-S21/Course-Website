@@ -49,13 +49,13 @@ lessons:
   - date: "Fri, Jan 29"
     title: "Module 2.3: One way ANOVA (distribution of estimates and linear combinations)"
     reading: "2-3-reading.html"
-    #slides: "2-3-anova-linear-combinations.html"
-    #slidespdf: "2-3-anova-linear-combinations.pdf"
+    slides: "2-3-anova-linear-combinations.html"
+    slidespdf: "2-3-anova-linear-combinations.pdf"
     
   - title: "Module 2.4: Multi-way ANOVA and interactions"
     reading: "2-4-reading.html"
-    #slides: "2-4-multi-way-anova.html"
-    #slidespdf: "2-4-multi-way-anova.pdf"
+    slides: "2-4-multi-way-anova.html"
+    slidespdf: "2-4-multi-way-anova.pdf"
     
   - date: "NEW ASSIGNMENT:"
     title: "Homework 1"
