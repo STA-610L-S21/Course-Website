@@ -38,18 +38,24 @@ lessons:
     reading: "2-1-reading.html"
     slides: "2-1-anova-estimation.html"
     slidespdf: "2-1-anova-estimation.pdf"
+    video: "https://api.playposit.com/go/play/1127078/1403540/1028257/0/Multilevel-and-Hierarchical-Models--Module-21-One-way-ANOVA-formulation-and-estimation"
     
   - title: "Module 2.2: One way ANOVA (step-down tests and matrix formulation)"
     reading: "2-2-reading.html"
     slides: "2-2-anova-matrix-formulation.html"
     slidespdf: "2-2-anova-matrix-formulation.pdf"
+    video: "https://api.playposit.com/go/play/1127090/1403540/1028257/0/Multilevel-and-Hierarchical-Models--Module-22-One-way-ANOVA-step-down-tests-and-matrix-formulation"
     
   - date: "Fri, Jan 29"
     title: "Module 2.3: One way ANOVA (distribution of estimates and linear combinations)"
     reading: "2-3-reading.html"
+    #slides: "2-3-anova-linear-combinations.html"
+    #slidespdf: "2-3-anova-linear-combinations.pdf"
     
   - title: "Module 2.4: Multi-way ANOVA and interactions"
     reading: "2-4-reading.html"
+    #slides: "2-4-multi-way-anova.html"
+    #slidespdf: "2-4-multi-way-anova.pdf"
     
   - date: "NEW ASSIGNMENT:"
     title: "Homework 1"
