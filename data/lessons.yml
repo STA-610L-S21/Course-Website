@@ -51,11 +51,13 @@ lessons:
     reading: "2-3-reading.html"
     slides: "2-3-anova-linear-combinations.html"
     slidespdf: "2-3-anova-linear-combinations.pdf"
+    video: "https://api.playposit.com/go/play/1133403/1403540/1028257/0/Multilevel-and-Hierarchical-Models--Module-23-One-way-ANOVA-distribution-of-estimates-and-linear-combinations"
     
   - title: "Module 2.4: Multi-way ANOVA and interactions"
     reading: "2-4-reading.html"
     slides: "2-4-multi-way-anova.html"
     slidespdf: "2-4-multi-way-anova.pdf"
+    video: "https://api.playposit.com/go/play/1133405/1403540/1028257/0/Multilevel-and-Hierarchical-Models--Module-24-Multi-way-ANOVA-and-interactions"
     
   - date: "NEW ASSIGNMENT:"
     title: "Homework 1"
