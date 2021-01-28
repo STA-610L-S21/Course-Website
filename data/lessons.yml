@@ -20,7 +20,6 @@ lessons:
     
   - title: "Module 1.4: Short activity"
     slides: "1-4-intro-activity.html"
-    #slidespdf: "1-4-intro-activity.pdf"
     
     
   - title: " "
@@ -59,9 +58,12 @@ lessons:
     slidespdf: "2-4-multi-way-anova.pdf"
     video: "https://api.playposit.com/go/play/1133405/1403540/1028257/0/Multilevel-and-Hierarchical-Models--Module-24-Multi-way-ANOVA-and-interactions"
     
+  - title: "Module 2.5: Short activity"
+    slides: "2-5-short-activity.html"
+    
   - date: "NEW ASSIGNMENT:"
     title: "Homework 1"
-    #hw: "hw-01.html"
+    hw: "hw-01.html"
   
   
   
