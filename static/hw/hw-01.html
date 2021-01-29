@@ -1744,6 +1744,16 @@ div.tocify {
 <div id="questions" class="section level2">
 <h2>Questions</h2>
 <ol style="list-style-type: decimal">
+<li><p><font color="green">Game of Thrones</font> <font color="blue"><strong>(8 points)</strong></font></p>
+<p>The handling of female characters in the American series Game of Thrones, and indeed whether it is feminist or mysogynistic, has been hotly debated. The dataset <a href="gotscreen.RData">gotscreen.RData</a> contains information on the number of seconds of screentime for members of each gender in each episode of seven seasons of Game of Thrones. Using descriptive statistics as well as a two-way ANOVA model with interaction, explore whether an actor’s screentime differs by gender (male, female, or unspecified) and whether there are any differences in potential gender effects across the 7 seasons of the show. Your answer should include the following details.</p>
+<ul>
+<li>Exploratory data analysis of screentime, including average screentime per gender as well as total screentime for all actors of a given gender.</li>
+<li>A clear specification of the model using an equation, including clear specification of any modeling assumptions.</li>
+<li>A clearly-labeled table providing point and interval estimates for each parameter in the linear predictor of your model.</li>
+<li>Clear specification of any hypothesis tests or other inferential techniques used to evaluate the questions posed above.</li>
+<li>Evidence of adequacy of model fit and evaluation of suitability of any assumptions.</li>
+<li>Clear description of results in language accessible to the average fan of the show, including graphical displays as appropriate. Comment on any insights that may differ between exploratory data analysis and analysis using the ANOVA model, along with reasons why these insights may differ.</li>
+</ul></li>
 <li><p><font color="green">OLS Estimation</font> <font color="blue"><strong>(6 points)</strong></font></p>
 <ul>
 <li><p><font color="green"><strong>Part (a).</strong></font> Using the scalar formulation of the ANOVA model <span class="math inline">\(y_{ij} \sim N\left(\mu_j,\sigma^2 \right)\)</span>, with <span class="math inline">\(\mu=(\mu_1,\cdots,\mu_J)\)</span>, show that <span class="math inline">\(\widehat{\mu}_{OLS}=(\overline{y}_1,\cdots,\overline{y}_J)\)</span>, where <span class="math inline">\(\overline{y}_j\)</span> is the sample mean in group <span class="math inline">\(j\)</span>.</p></li>
@@ -1754,16 +1764,6 @@ div.tocify {
 <li><p><font color="green"><strong>iiii.</strong></font> <span class="math inline">\(\widehat{\alpha}_j=\widehat{\mu}_j-\widehat{\mu}=\overline{y}_{j}-\overline{y}_{\cdot \cdot}\)</span></p></li>
 </ul></li>
 <li><p><font color="green"><strong>Part (c).</strong></font> Write the model in part (a) in matrix form assuming you have 3 groups with 3 observations each and show that <span class="math inline">\((X&#39;X)^{-1}X&#39;y\)</span> yields the same estimates as in the scalar formulation. Note the parameter vector corresponding to this model should contain the three mean parameters <span class="math inline">\((\mu_1, \mu_2, \mu_3)\)</span>.</p></li>
-</ul></li>
-<li><p><font color="green">Game of Thrones</font> <font color="blue"><strong>(8 points)</strong></font></p>
-<p>The handling of female characters in the American series Game of Thrones, and indeed whether it is feminist or mysogynistic, has been hotly debated. The dataset <a href="gotscreen.RData">gotscreen.RData</a> contains information on the number of seconds of screentime for members of each gender in each episode of seven seasons of Game of Thrones. Using descriptive statistics as well as a two-way ANOVA model with interaction, explore whether an actor’s screentime differs by gender (male, female, or unspecified) and whether there are any differences in potential gender effects across the 7 seasons of the show. Your answer should include the following details.</p>
-<ul>
-<li>Exploratory data analysis of screentime, including average screentime per gender as well as total screentime for all actors of a given gender.</li>
-<li>A clear specification of the model using an equation, including clear specification of any modeling assumptions.</li>
-<li>A clearly-labeled table providing point and interval estimates for each parameter in the linear predictor of your model.</li>
-<li>Clear specification of any hypothesis tests or other inferential techniques used to evaluate the questions posed above.</li>
-<li>Evidence of adequacy of model fit and evaluation of suitability of any assumptions.</li>
-<li>Clear description of results in language accessible to the average fan of the show, including graphical displays as appropriate. Comment on any insights that may differ between exploratory data analysis and analysis using the ANOVA model, along with reasons why these insights may differ.</li>
 </ul></li>
 <li><p><font color="green">Contrasts</font> <font color="blue"><strong>(4 points)</strong></font></p>
 <p>Suppose you fit an ANOVA model to responses collected from J=3 groups. Consider the following two ANOVA model parameterizations. <span class="math display">\[\begin{eqnarray}
