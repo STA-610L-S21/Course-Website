@@ -70,7 +70,7 @@ lessons:
   - week: "WEEK 3"
     date: "Mon, Feb 1"
     title: "Lab 2: Help, these kids are killing me! (Part II)"
-    #lab: "lab-02.html"
+    lab: "lab-02.html"
     
   - date: "Tue, Feb 2"
     title: "Drop/Add ends"
