@@ -76,10 +76,20 @@ lessons:
     title: "Drop/Add ends"
     
   - date: "Wed, Feb 3"
-    title: "Random effects ANOVA"
+    title: "Module 2.6: Random effects ANOVA (introduction)"
+    reading: "2-6-reading.html"
+    slides: "2-6-random-effects-anova-intro.html"
+    slidespdf: "2-6-random-effects-anova-intro.pdf"
+    
+  - title: "Module 2.7: Random effects ANOVA (estimation)"
+    reading: "2-7-reading.html"
+    slides: "2-7-random-effects-anova-estimation.html"
+    slidespdf: "2-7-random-effects-anova-estimation.pdf"
     
   - date: "Fri, Feb 5"
-    title: "Random effects ANOVA"
+    title: "Module 2.8: Random effects ANOVA (illustration I)"
+    
+  - title: "Module 2.9: Random effects ANOVA (illustration II)"
     
     
   
