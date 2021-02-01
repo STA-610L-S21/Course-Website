@@ -80,11 +80,13 @@ lessons:
     reading: "2-6-reading.html"
     slides: "2-6-random-effects-anova-intro.html"
     slidespdf: "2-6-random-effects-anova-intro.pdf"
+    video: "https://api.playposit.com/go/play/1138761/1403540/1028257/0/Multilevel-and-Hierarchical-Models--Module-26-Random-effects-ANOVA-introduction"
     
   - title: "Module 2.7: Random effects ANOVA (estimation)"
     reading: "2-7-reading.html"
     slides: "2-7-random-effects-anova-estimation.html"
     slidespdf: "2-7-random-effects-anova-estimation.pdf"
+    video: "https://api.playposit.com/go/play/1138743/1403540/1028257/0/Multilevel-and-Hierarchical-Models--Module-27-Random-effects-ANOVA-estimation"
     
   - date: "Fri, Feb 5"
     title: "Module 2.8: Random effects ANOVA (illustration I)"
