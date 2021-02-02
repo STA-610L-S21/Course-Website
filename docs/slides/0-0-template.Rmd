@@ -51,7 +51,7 @@ library(rvest)
 
 class: center, middle
 
-# What's next? 
+# What's next?
 
 ### Move on to the readings for the next module!
 
