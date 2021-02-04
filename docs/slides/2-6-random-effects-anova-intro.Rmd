@@ -91,8 +91,8 @@ We wish to estimate the distribution of radon levels in houses $i$ within the 85
   - One estimate would be the average of all radon levels in Minnesota (same estimate for all counties), $\overline{y}$, but this ignores variation across counties, and some counties may have higher radon levels naturally than others (radon is more commonly found in soils with granite rock, as opposed to some other soil types).
 
   - Another estimate would be just to average the radon level in each county, $\overline{y}_j$, which can over-fit the data within county (for example, Lac Qui Parle County, which has the highest observed radon level of all the 85 MN counties, had radon measures from only 2 homes).
-    
-    This is similar to using a standard ANOVA model with a .hlight[fixed effect] for county (including county as a factor variable).
+  
+  This is similar to using a standard ANOVA model with a .hlight[fixed effect] for county (including county as a factor variable).
 
 
 

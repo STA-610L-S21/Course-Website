@@ -89,9 +89,9 @@ lessons:
     video: "https://api.playposit.com/go/play/1138743/1403540/1028257/0/Multilevel-and-Hierarchical-Models--Module-27-Random-effects-ANOVA-estimation"
     
   - date: "Fri, Feb 5"
-    title: "Module 2.8: Random effects ANOVA illustration (in class; no video)"
-    #slides: "2-8-random-effects-anova-illustration.html"
-    #slidespdf: "2-8-random-effects-anova-illustration.pdf"
+    title: "Module 2.8: Random effects ANOVA illustration (in class)"
+    slides: "2-8-random-effects-anova-illustration.html"
+    slidespdf: "2-8-random-effects-anova-illustration.pdf"
     
     
     
