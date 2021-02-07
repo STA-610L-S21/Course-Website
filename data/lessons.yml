@@ -101,13 +101,23 @@ lessons:
     lab: "lab-03.html"
   
   - date: "Wed, Feb 10"
-    title: "Random effects ANOVA: Bayesian estimation"
+    title: "Module 2.9: Random effects ANOVA (Bayesian estimation I)"
+    reading: "2-9-reading.html"
+    slides: "2-9-random-effects-anova-bayesian-estimation.html"
+    slidespdf: "2-9-random-effects-anova-bayesian-estimation.pdf"
+    
+  - title: "Module 2.10: Random effects ANOVA (Bayesian estimation II)"
+    reading: "2-10-reading.html"
+    slides: "2-10-random-effects-anova-bayesian-estimation-II.html"
+    slidespdf: "2-10-random-effects-anova-bayesian-estimation-II.pdf"
     
   - date: "DELIVERABLES:"
     title: "Homework 1 due!"
     
   - date: "Fri, Feb 12"
-    title: "Random effects ANOVA: Bayesian estimation"
+    title: "Module 2.11: Random effects ANOVA (priors for group-level variance)"
+    
+  - title: "Module 2.12: Random effects ANCOVA (introduction)"
     
   - date: "NEW ASSIGNMENT:"
     title: "Homework 2"
