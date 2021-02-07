@@ -98,7 +98,7 @@ lessons:
   - week: "WEEK 4"
     date: "Mon, Feb 8"
     title: "Lab 3: Hospital Rankings (Part I)"
-    #lab: "lab-03-.html"
+    lab: "lab-03.html"
   
   - date: "Wed, Feb 10"
     title: "Random effects ANOVA: Bayesian estimation"

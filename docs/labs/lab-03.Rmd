@@ -1,0 +1,69 @@
+---
+title: "Lab 3: Hospital Rankings (Part I)"
+author: "Multilevel and hierarchical models"
+output: 
+  tufte::tufte_html:
+    tufte_variant: "envisioned"
+    highlight: pygments
+    css: "lab.css"
+    toc: true
+link-citations: yes
+---
+
+```{r include=FALSE}
+library(tidyverse)
+library(tufte)
+library(knitr)
+options(
+  htmltools.dir.version = FALSE, # for blogdown
+  show.signif.stars = FALSE,     # for regression output
+  digits = 2
+  )
+knitr::opts_chunk$set(eval = FALSE)
+```
+
+
+**Preliminary report due:**  11:59pm, Tuesday, February 9
+
+
+# Housekeeping
+
+<!-- ## R/RStudio -->
+<!-- You all should have R and RStudio installed on your computers by now. If you do not, first install the latest version of R here: https://cran.rstudio.com (remember to select the right installer for your operating system). Next, install the latest version of RStudio here: https://www.rstudio.com/products/rstudio/download/. Scroll down to the "Installers for Supported Platforms" section and find the right installer for your operating system. -->
+
+
+## Gradescope
+You MUST submit both your .Rmd and .pdf files to the course site on Gradescope here: https://www.gradescope.com/courses/224715/assignments. Do NOT create a zipped folder with the two documents but instead, upload them as two separate documents. Also, be sure to knit to pdf and NOT html; ask the TA about knitting to pdf if you cannot figure it out. Be sure to submit under the right assignment entry. Finally, when submitting your files, please select the corresponding pages for each exercise.
+
+
+
+# Introduction
+This is an individual lab split across two labs. You only need to turn in a preliminary report for this lab; you will turn in your final report after the next lab.
+
+
+
+# The Data
+
+We will consider [data  from the Centers for Medicare and Medicaid Services on hospital costs and profit from the 2014 fiscal year](https://sta-610l-s21.github.io/Course-Website/labs/data/hc2014.RData). Our interest is in examining variability of net hospital income across states. 
+
+One primary item of interest is the ranking of states by net income of hospitals. 
+
+It is important to control for the potential influence of hospital ownership (in the variable called control) and of the number of beds (a proxy for hospital size). The ownership categories include Voluntary Nonprofit-Church, Voluntary Nonprofit-Other, Proprietary-Individual, Proprietary-Corporation, Proprietary-Partnership, Proprietary-Other, Governmental-Federal, Governmental-City-County, Governmental-County, Governmental-State, Governmental-Hospital District, Governmental-City, and Governmental-Other.
+
+
+# Exercises
+
+For this lab, ignore potential effects of number of beds and ownership of the hospital. Develop and fit a random effects anova model for `netincome` (your response variable) using `state` as your grouping variable. Obtain preliminary results on the rankings of the states.
+
+There will be a page limit on your final report next week but there is NO page limit for this preliminary report. Your preliminary report should include the following.
+
++ Clear specification of your model (using equations and the right notations).
++ Clearly-labeled tables and graphical displays describing the data and communicating your findings.
++ Uncertainty quantification around effect estimates of interest (no point estimates without uncertainty!).
++ Clear description of results in language accessible to a general scientifically-savvy reader.
+
+DO NOT INCLUDE R CODE OR OUTPUT IN YOUR REPORTS. All R outputs should be converted to nicely formatted tables. Feel free to use R packages such as kable, xtable, stargazer, etc.
+
+
+
+
