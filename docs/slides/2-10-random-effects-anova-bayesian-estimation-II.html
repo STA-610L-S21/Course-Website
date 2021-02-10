@@ -425,6 +425,120 @@ $$
 
 
 
+---
+## Gibbs sampler
+
+
+```r
+#Data summaries
+J &lt;- #number of groups
+ybar &lt;- #vector of the group sample means
+s_j_sq &lt;- #vector of the group sample variances
+n &lt;- #vector of the number of observations in each group
+
+
+#Hyperparameters for the priors
+mu_0 &lt;- ...
+gamma_0_sq &lt;- ...
+eta_0 &lt;- ...
+tau_0_sq &lt;- ...
+alpha &lt;- ...
+a &lt;- ...
+b &lt;- ...
+
+
+#Grid values for sampling nu_0_grid
+nu_0_grid &lt;- 1:5000
+
+
+#Initial values for Gibbs sampler
+theta &lt;- ybar #theta vector for all the mu_j's
+sigma_sq &lt;- s_j_sq
+mu &lt;- mean(theta)
+tau_sq &lt;- var(theta)
+nu_0 &lt;- 1
+sigma_0_sq &lt;- 100
+```
+
+
+
+---
+## Gibbs sampler
+
+
+```r
+#first set number of iterations and burn-in, then set seed
+n_iter &lt;- 10000; burn_in &lt;- 0.3*n_iter
+set.seed(1234)
+
+
+#Set null matrices to save samples
+SIGMA_SQ &lt;- THETA &lt;- matrix(nrow=n_iter, ncol=J)
+OTHER_PAR &lt;- matrix(nrow=n_iter, ncol=4)
+
+
+#Now, to the Gibbs sampler
+for(s in 1:(n_iter+burn_in)){
+  
+  #update the theta vector (all the mu_j's)
+  tau_j_star &lt;- 1/(n/sigma_sq + 1/tau_sq)
+  mu_j_star &lt;- tau_j_star*(ybar*n/sigma_sq + mu/tau_sq)
+  theta &lt;- rnorm(J,mu_j_star,sqrt(tau_j_star))
+  
+  #update the sigma_sq vector (all the sigma_sq_j's)
+  nu_j_star &lt;- nu_0 + n
+  theta_long &lt;- rep(theta,n)
+  nu_j_star_sigma_j_sq_star &lt;- 
+    nu_0*sigma_0_sq + c(by((Y[,"mathscore"] - theta_long)^2,Y[,"school"],sum))
+  sigma_sq &lt;- 1/rgamma(J,(nu_j_star/2),(nu_j_star_sigma_j_sq_star/2))
+  
+  #update mu
+  gamma_n_sq &lt;- 1/(J/tau_sq + 1/gamma_0_sq)
+  mu_n &lt;- gamma_n_sq*(J*mean(theta)/tau_sq + mu_0/gamma_0_sq)
+  mu &lt;- rnorm(1,mu_n,sqrt(gamma_n_sq))
+```
+
+
+
+---
+## Gibbs sampler
+
+
+```r
+  #update tau_sq
+  eta_n &lt;- eta_0 + J
+  eta_n_tau_n_sq &lt;- eta_0*tau_0_sq + sum((theta-mu)^2)
+  tau_sq &lt;- 1/rgamma(1,eta_n/2,eta_n_tau_n_sq/2)
+  
+  #update sigma_0_sq
+  sigma_0_sq &lt;- rgamma(1,(a + J*nu_0/2),(b + nu_0*sum(1/sigma_sq)/2))
+  
+  #update nu_0
+  log_prob_nu_0 &lt;- (J*nu_0_grid/2)*log(nu_0_grid*sigma_0_sq/2) -
+    J*lgamma(nu_0_grid/2) +
+    (nu_0_grid/2+1)*sum(log(1/sigma_sq)) -
+    nu_0_grid*(alpha + sigma_0_sq*sum(1/sigma_sq)/2)
+  nu_0 &lt;- sample(nu_0_grid,1, prob = exp(log_prob_nu_0 - max(log_prob_nu_0)) )
+  #this last step substracts the maximum logarithm from all logs
+  #it is a neat trick that throws away all results that are so negative
+  #they will screw up the exponential
+  #note that the sample function will renormalize the probabilities internally
+  
+  
+  #save results only past burn-in
+  if(s &gt; burn_in){
+    THETA[(s-burn_in),] &lt;- theta
+    SIGMA_SQ[(s-burn_in),] &lt;- sigma_sq
+    OTHER_PAR[(s-burn_in),] &lt;- c(mu,tau_sq,sigma_0_sq,nu_0)
+  }
+}
+colnames(OTHER_PAR) &lt;- c("mu","tau_sq","sigma_0_sq","nu_0")
+```
+
+
+
+
+
 
 ---
 
