@@ -111,15 +111,18 @@ lessons:
     slides: "2-10-random-effects-anova-bayesian-estimation-II.html"
     slidespdf: "2-10-random-effects-anova-bayesian-estimation-II.pdf"
     
-  - title: "Module 2.11: Random effects ANOVA (priors for group-level variance)"
-    slides: "2-11-random-effects-anova-priors-group-level-variance.html"
-    slidespdf: "2-11-random-effects-anova-priors-group-level-variance.pdf"
-    
   - date: "DELIVERABLES:"
     title: "Homework 1 due!"
     
   - date: "Fri, Feb 12"
-    title: "Module 2.12: Random effects ANCOVA"
+    title: "Module 2.11: Random effects ANOVA (priors for group-level variance)"
+    slides: "2-11-random-effects-anova-priors-group-level-variance.html"
+    slidespdf: "2-11-random-effects-anova-priors-group-level-variance.pdf"
+    
+  - title: "Module 2.12: Random effects ANCOVA (introduction)"
+    reading: "2-12-reading.html"
+    slides: "2-12-random-effects-ancova-intro.html"
+    slidespdf: "2-12-random-effects-ancova-intro.pdf"
     
   - date: "NEW ASSIGNMENT:"
     title: "Homework 2"
