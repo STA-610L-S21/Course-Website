@@ -133,7 +133,7 @@ lessons:
   - week: "WEEK 5"
     date: "Mon, Feb 15"
     title: "Lab 4: Hospital Rankings (Part II)"
-    #lab: "lab-04-.html"
+    lab: "lab-04.html"
   
     
   - date: "Wed, Feb 17"
