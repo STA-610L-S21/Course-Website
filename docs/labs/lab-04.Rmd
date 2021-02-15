@@ -51,7 +51,7 @@ It is important to control for the potential influence of hospital ownership (in
 
 # Exercises
 
-Prepare a written report that describes a Bayesian hierachical normal model for capturing the association between ownership type and income, while controlling for the effect of the number of beds and income. You MUST justify your choice of priors and hyper-parameters. Your report should also describe variability in net income across states and provide information about the ranking of states with respect to net income. Ranking information should include not only an estimated ranking but also some characterization of uncertainty. Your report should also include the following.
+Prepare a written report that describes a Bayesian hierachical normal model for capturing the association between ownership type and income across states, while controlling for the effect of the number of beds. You MUST justify your choice of priors and hyper-parameters. Your report should also describe variability in net income across states and provide information about the ranking of states with respect to net income. Ranking information should include not only an estimated ranking but also some characterization of uncertainty. Your report should also include the following.
 
 + Exploratory data analysis and well written justifications for any transformations.
 + Clear specification of your model (using equations and the right notations).
