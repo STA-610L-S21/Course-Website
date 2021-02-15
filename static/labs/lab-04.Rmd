@@ -23,7 +23,7 @@ knitr::opts_chunk$set(eval = FALSE)
 ```
 
 
-**Preliminary report due:**  11:59pm, Wednesday, February 17
+**Report due:**  11:59pm, Wednesday, February 17
 
 
 # Housekeeping
