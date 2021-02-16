@@ -364,7 +364,7 @@ Here we don't see much evidence that enrollment is useful, so we don't need to u
 
 Next we can consider eligibility for free and reduced lunch, so that 
 
-Here we'll consider a variety of models, including the one above, a model without the interaction with flp, a model that has the flp main effect but drops the SES random effect, and a model that drops all the school random effects given that flp is in the model ($\tau=0$).
+Here we'll consider a variety of models, including the one above, a model without the interaction with flp, a model that has the flp main effect but drops the SES random effect, and a model that drops all the school random effects given that flp is in the model $(\tau=0)$.
 
 ```{r step2, eval=FALSE}
 mod3a=lmer(mscore~as.factor(flp)+sesstd+(sesstd|school),data=nels, REML=FALSE)
