@@ -140,14 +140,12 @@ lessons:
     title: "Module 2.13: Random effects ANCOVA (cont'd)"
     slides: "2-13-random-effects-ancova-contd.html"
     slidespdf: "2-13-random-effects-ancova-contd.pdf"
-    
-  - title: "Module 2.14: Random effects ANCOVA (holistic analysis)"
-    slides: "2-14-random-effects-ancova-holistic-analysis.html"
-    slidespdf: "2-14-random-effects-ancova-holistic-analysis.pdf"
 
 
   - date: "Fri, Feb 19"
-    title: "Higher level multilevel models; Case Study I"
+    title: "Module 2.14: Random effects ANCOVA (holistic analysis)"
+    slides: "2-14-random-effects-ancova-holistic-analysis.html"
+    slidespdf: "2-14-random-effects-ancova-holistic-analysis.pdf"
     
     
     
