@@ -140,6 +140,9 @@ lessons:
     title: "Module 2.13: Random effects ANCOVA (cont'd)"
     slides: "2-13-random-effects-ancova-contd.html"
     slidespdf: "2-13-random-effects-ancova-contd.pdf"
+    
+  - title: "R illustration for lme4 and brms"
+    video: "https://api.playposit.com/go/play/1164919/1403540/1028257/0/Multilevel-and-Hierarchical-Models--R-illustration-for-lme4-and-brms"
 
 
   - date: "Fri, Feb 19"
