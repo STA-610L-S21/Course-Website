@@ -171,9 +171,11 @@ What happened to the estimates for enrollment, eligibility for free lunch, publi
 ---
 ## Other considerations
 
-The school-specific fixed effects explain *all* heterogeneity in means across schools, leaving no room for the other factors (which we care more about in terms of learning about patterns in the data) to explain any heterogeneity. 
+The school-specific fixed effects explain approximately *all* heterogeneity in means across schools, leaving basically no room for the other factors (which we care more about in terms of learning about patterns in the data) to explain any heterogeneity. 
 
 So this approach does not allow us to evaluate school-level predictors, and it is also very expensive in terms of spending degrees of freedom (estimating a lot of parameters).
+
+This is a relatively common phenomenon when dealing with categorical group-level predictors.
 
 
 
@@ -228,7 +230,8 @@ How much of the remaining heterogeneity across schools is explained by the perce
 
 
 ```r
-fit2=lmer(mscore~as.factor(enroll)+as.factor(flp)+(1|school),data=nels, REML=FALSE)
+fit2=lmer(mscore~as.factor(enroll)+as.factor(flp)+(1|school),
+          data=nels, REML=FALSE)
 sigma2hat &lt;- sigma(fit2)*sigma(fit2) #pick off estimate of sigma2
 tau2hat &lt;- as.numeric(VarCorr(fit2)$school) #pick off est of tau2
 c(sigma2hat,tau2hat,tau2hat/(tau2hat+sigma2hat)) #show vars and correlation
@@ -238,7 +241,7 @@ c(sigma2hat,tau2hat,tau2hat/(tau2hat+sigma2hat)) #show vars and correlation
 ## [1] 73.7655328 13.5097521  0.1547947
 ```
 
-Wow, school-level SES explained a lot of that heterogeneity.
+Wow, "school-level SES" explained a lot of that heterogeneity.
 
 
 
@@ -249,7 +252,8 @@ What if we add public/private status?
 
 
 ```r
-fit3=lmer(mscore~as.factor(enroll)+as.factor(flp)+as.factor(public)+(1|school),data=nels, REML=FALSE)
+fit3=lmer(mscore~as.factor(enroll)+as.factor(flp)+as.factor(public)+
+            (1|school),data=nels, REML=FALSE)
 sigma2hat=sigma(fit3)*sigma(fit3) #pick off estimate of sigma2
 tau2hat=as.numeric(VarCorr(fit3)$school) #pick off est of tau2
 c(sigma2hat,tau2hat,tau2hat/(tau2hat+sigma2hat)) #show vars and correlation
@@ -269,7 +273,8 @@ Now we add urbanicity.
 
 
 ```r
-fit4=lmer(mscore~as.factor(enroll)+as.factor(flp)+as.factor(public)+urbanicity+(1|school),data=nels, REML=FALSE)
+fit4=lmer(mscore~as.factor(enroll)+as.factor(flp)+as.factor(public)+
+            urbanicity+(1|school),data=nels, REML=FALSE)
 sigma2hat=sigma(fit4)*sigma(fit4) #pick off estimate of sigma2
 tau2hat=as.numeric(VarCorr(fit4)$school) #pick off est of tau2
 c(sigma2hat,tau2hat,tau2hat/(tau2hat+sigma2hat)) #show vars and correlation
@@ -375,19 +380,15 @@ summary(mod1)
 ---
 ## NELS Data
 
+.large[
 
 ```r
-mod2a=lmer(mscore~as.factor(enroll)+sesstd+(sesstd|school),data=nels, REML=FALSE)
-mod2b=lmer(mscore~as.factor(enroll)+sesstd+as.factor(enroll):sesstd+(sesstd|school),
+mod2a=lmer(mscore~as.factor(enroll)+sesstd+(sesstd|school),
            data=nels, REML=FALSE)
+mod2b=lmer(mscore~as.factor(enroll)+sesstd+as.factor(enroll):sesstd+
+             (sesstd|school),data=nels, REML=FALSE)
 anova(mod2b,mod2a)
-anova(mod2a,mod1)
 ```
-
-
-
----
-## NELS Data
 
 ```
 ## Data: nels
@@ -400,6 +401,10 @@ anova(mod2a,mod1)
 ## mod2b   16 92559 92678 -46263    92527 7.9798  5     0.1574
 ```
 
+```r
+anova(mod2a,mod1)
+```
+
 ```
 ## Data: nels
 ## Models:
@@ -409,6 +414,7 @@ anova(mod2a,mod1)
 ## mod1     6 92553 92598 -46271    92541                     
 ## mod2a   11 92557 92639 -46267    92535 6.1315  5     0.2936
 ```
+]
 
 Here we don't see much evidence that enrollment is useful, so we don't need to use it.
 
@@ -423,7 +429,8 @@ Here we'll consider a variety of models, including the one above, a model withou
 
 
 ```r
-mod3a=lmer(mscore~as.factor(flp)+sesstd+(sesstd|school),data=nels, REML=FALSE)
+mod3a=lmer(mscore~as.factor(flp)+sesstd+(sesstd|school),
+           data=nels, REML=FALSE)
 mod3b=lmer(mscore~as.factor(flp)+sesstd+as.factor(flp)*sesstd+
              (sesstd|school),data=nels, REML=FALSE)
 mod3c=lmer(mscore~as.factor(flp)+sesstd+(1|school),
@@ -443,8 +450,10 @@ BIC(mod3d) #check if random intercept needed by comparing to BIC from 3c
 
 
 ```r
-mod3a=lmer(mscore~as.factor(flp)+sesstd+(sesstd|school),data=nels, REML=FALSE)
-mod3b=lmer(mscore~as.factor(flp)+sesstd+as.factor(flp)*sesstd+(sesstd|school),data=nels, REML=FALSE)
+mod3a=lmer(mscore~as.factor(flp)+sesstd+(sesstd|school),
+           data=nels, REML=FALSE)
+mod3b=lmer(mscore~as.factor(flp)+sesstd+as.factor(flp)*sesstd+(sesstd|school),
+           data=nels, REML=FALSE)
 anova(mod3b,mod3a)
 ```
 
@@ -488,8 +497,8 @@ anova(mod3a,mod1)
 
 
 ```r
-mod3c=lmer(mscore~as.factor(flp)+sesstd+(1|school),data=nels, REML=FALSE)
-mod3d=lm(mscore~as.factor(flp)+sesstd,data=nels)
+mod3c=lmer(mscore~as.factor(flp)+sesstd+(1|school),
+           data=nels, REML=FALSE)
 anova(mod3c,mod3a) #just look at BIC here
 ```
 
@@ -504,6 +513,7 @@ anova(mod3c,mod3a) #just look at BIC here
 ```
 
 ```r
+mod3d=lm(mscore~as.factor(flp)+sesstd,data=nels)
 BIC(mod3d) #check if random intercept needed by comparing to BIC from 3c
 ```
 
@@ -572,7 +582,9 @@ summary(mod3c)
 ---
 ## Model selection
 
-The more students we have eligible for the free and reduced price lunch program, the lower the math scores. In addition, the coefficient on individual-level SES did not change much in magnitude -- so SES operates both on the school level and the individual level.
+The more students we have eligible for the free and reduced price lunch program, the lower the math scores.
+
+In addition, the coefficient on individual-level SES did not change much in magnitude -- so SES operates both on the school level and the individual level.
 
 Let's now add the public school indicator.
 
@@ -595,8 +607,10 @@ anova(mod4b,mod3c)
 
 
 ```r
-mod4a=lmer(mscore~as.factor(flp)+as.factor(public)+sesstd+(1|school),data=nels, REML=FALSE)
-mod4b=lmer(mscore~as.factor(flp)+as.factor(public) + sesstd+as.factor(public)*sesstd+(1|school),data=nels, REML=FALSE)
+mod4a=lmer(mscore~as.factor(flp)+as.factor(public)+sesstd+(1|school),
+           data=nels, REML=FALSE)
+mod4b=lmer(mscore~as.factor(flp)+as.factor(public) + sesstd+
+             as.factor(public)*sesstd+(1|school),data=nels, REML=FALSE)
 anova(mod4b,mod4a)
 ```
 
@@ -707,8 +721,53 @@ BIC suggests leaving urbanicity out of the model.
   - The lower the SES status of the whole school (measured by percent eligible for free and reduced-price lunch), the lower the math scores on average
   - Having higher individual-level SES was associated with higher math scores regardless of the school environment
   - A random intercept for school explained significant variability across schools and controlled for lack of independence within schools
-`$$y_{ij}=\beta_{0,j}+\beta_{1,j}\text{ses}_{ij}+ \varepsilon_{ij}$$`
-`$$\beta_{0,j}=\beta_0+\psi_{0,l}I(\text{flp}_j=l)+b_{0,j} ~~~~~~ \beta_{1,j}=\beta_1$$` `$$b_{0,j} \sim N \left( 0 ,\tau^2 \right) ~~~ \varepsilon_{ij}\sim N(0,\sigma^2)$$`
+`$$y_{ij}=\beta_{0,j}+\beta_{1}\text{ses}_{ij}+ \varepsilon_{ij}$$`
+`$$\beta_{0,j}=\beta_0+\psi_{0,l}I(\text{flp}_j=l)+b_{0,j}$$`
+`$$b_{0,j} \sim N \left( 0 ,\tau^2 \right) ~~~ \varepsilon_{ij}\sim N(0,\sigma^2)$$`
+
+
+---
+## Final model again
+
+.large[
+
+```r
+summary(mod3c)
+```
+
+```
+## Linear mixed model fit by maximum likelihood  ['lmerMod']
+## Formula: mscore ~ as.factor(flp) + sesstd + (1 | school)
+##    Data: nels
+## 
+##      AIC      BIC   logLik deviance df.resid 
+##  92403.9  92448.7 -46196.0  92391.9    12968 
+## 
+## Scaled residuals: 
+##     Min      1Q  Median      3Q     Max 
+## -3.9560 -0.6434  0.0178  0.6710  4.4906 
+## 
+## Random effects:
+##  Groups   Name        Variance Std.Dev.
+##  school   (Intercept)  9.004   3.001   
+##  Residual             67.959   8.244   
+## Number of obs: 12974, groups:  school, 684
+## 
+## Fixed effects:
+##                 Estimate Std. Error t value
+## (Intercept)     52.84307    0.24462 216.020
+## as.factor(flp)2 -1.87992    0.33042  -5.689
+## as.factor(flp)3 -4.79607    0.36150 -13.267
+## sesstd           3.10819    0.08578  36.233
+## 
+## Correlation of Fixed Effects:
+##             (Intr) as.()2 as.()3
+## as.fctr(f)2 -0.739              
+## as.fctr(f)3 -0.697  0.514       
+## sesstd      -0.202  0.143  0.237
+```
+]
+
 
 
 

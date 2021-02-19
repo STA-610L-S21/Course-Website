@@ -186,9 +186,11 @@ What happened to the estimates for enrollment, eligibility for free lunch, publi
 ---
 ## Other considerations
 
-The school-specific fixed effects explain *all* heterogeneity in means across schools, leaving no room for the other factors (which we care more about in terms of learning about patterns in the data) to explain any heterogeneity. 
+The school-specific fixed effects explain approximately *all* heterogeneity in means across schools, leaving basically no room for the other factors (which we care more about in terms of learning about patterns in the data) to explain any heterogeneity. 
 
 So this approach does not allow us to evaluate school-level predictors, and it is also very expensive in terms of spending degrees of freedom (estimating a lot of parameters).
+
+This is a relatively common phenomenon when dealing with categorical group-level predictors.
 
 
 
@@ -232,13 +234,14 @@ Not much!
 How much of the remaining heterogeneity across schools is explained by the percentage of kids eligible for free or reduced price lunch?
 
 ```{r icc3, cache=TRUE}
-fit2=lmer(mscore~as.factor(enroll)+as.factor(flp)+(1|school),data=nels, REML=FALSE)
+fit2=lmer(mscore~as.factor(enroll)+as.factor(flp)+(1|school),
+          data=nels, REML=FALSE)
 sigma2hat <- sigma(fit2)*sigma(fit2) #pick off estimate of sigma2
 tau2hat <- as.numeric(VarCorr(fit2)$school) #pick off est of tau2
 c(sigma2hat,tau2hat,tau2hat/(tau2hat+sigma2hat)) #show vars and correlation
 ```
 
-Wow, school-level SES explained a lot of that heterogeneity.
+Wow, "school-level SES" explained a lot of that heterogeneity.
 
 
 
@@ -248,7 +251,8 @@ Wow, school-level SES explained a lot of that heterogeneity.
 What if we add public/private status?
 
 ```{r icc4, cache=TRUE}
-fit3=lmer(mscore~as.factor(enroll)+as.factor(flp)+as.factor(public)+(1|school),data=nels, REML=FALSE)
+fit3=lmer(mscore~as.factor(enroll)+as.factor(flp)+as.factor(public)+
+            (1|school),data=nels, REML=FALSE)
 sigma2hat=sigma(fit3)*sigma(fit3) #pick off estimate of sigma2
 tau2hat=as.numeric(VarCorr(fit3)$school) #pick off est of tau2
 c(sigma2hat,tau2hat,tau2hat/(tau2hat+sigma2hat)) #show vars and correlation
@@ -263,7 +267,8 @@ Now we add urbanicity.
 
 
 ```{r icc5, cache=TRUE}
-fit4=lmer(mscore~as.factor(enroll)+as.factor(flp)+as.factor(public)+urbanicity+(1|school),data=nels, REML=FALSE)
+fit4=lmer(mscore~as.factor(enroll)+as.factor(flp)+as.factor(public)+
+            urbanicity+(1|school),data=nels, REML=FALSE)
 sigma2hat=sigma(fit4)*sigma(fit4) #pick off estimate of sigma2
 tau2hat=as.numeric(VarCorr(fit4)$school) #pick off est of tau2
 c(sigma2hat,tau2hat,tau2hat/(tau2hat+sigma2hat)) #show vars and correlation
@@ -335,25 +340,16 @@ summary(mod1)
 ---
 ## NELS Data
 
-```{r step1, eval=FALSE}
-mod2a=lmer(mscore~as.factor(enroll)+sesstd+(sesstd|school),data=nels, REML=FALSE)
-mod2b=lmer(mscore~as.factor(enroll)+sesstd+as.factor(enroll):sesstd+(sesstd|school),
+.large[
+```{r step1b, cache=TRUE}
+mod2a=lmer(mscore~as.factor(enroll)+sesstd+(sesstd|school),
            data=nels, REML=FALSE)
+mod2b=lmer(mscore~as.factor(enroll)+sesstd+as.factor(enroll):sesstd+
+             (sesstd|school),data=nels, REML=FALSE)
 anova(mod2b,mod2a)
 anova(mod2a,mod1)
 ```
-
-
-
----
-## NELS Data
-```{r step1b, echo=FALSE, cache=TRUE}
-mod2a=lmer(mscore~as.factor(enroll)+sesstd+(sesstd|school),data=nels, REML=FALSE)
-mod2b=lmer(mscore~as.factor(enroll)+sesstd+as.factor(enroll):sesstd+(sesstd|school),
-           data=nels, REML=FALSE)
-anova(mod2b,mod2a)
-anova(mod2a,mod1)
-```
+]
 
 Here we don't see much evidence that enrollment is useful, so we don't need to use it.
 
@@ -367,7 +363,8 @@ Next we can consider eligibility for free and reduced lunch, so that
 Here we'll consider a variety of models, including the one above, a model without the interaction with flp, a model that has the flp main effect but drops the SES random effect, and a model that drops all the school random effects given that flp is in the model $(\tau=0)$.
 
 ```{r step2, eval=FALSE}
-mod3a=lmer(mscore~as.factor(flp)+sesstd+(sesstd|school),data=nels, REML=FALSE)
+mod3a=lmer(mscore~as.factor(flp)+sesstd+(sesstd|school),
+           data=nels, REML=FALSE)
 mod3b=lmer(mscore~as.factor(flp)+sesstd+as.factor(flp)*sesstd+
              (sesstd|school),data=nels, REML=FALSE)
 mod3c=lmer(mscore~as.factor(flp)+sesstd+(1|school),
@@ -386,8 +383,10 @@ BIC(mod3d) #check if random intercept needed by comparing to BIC from 3c
 ## Model selection
 
 ```{r step2b, cache=TRUE}
-mod3a=lmer(mscore~as.factor(flp)+sesstd+(sesstd|school),data=nels, REML=FALSE)
-mod3b=lmer(mscore~as.factor(flp)+sesstd+as.factor(flp)*sesstd+(sesstd|school),data=nels, REML=FALSE)
+mod3a=lmer(mscore~as.factor(flp)+sesstd+(sesstd|school),
+           data=nels, REML=FALSE)
+mod3b=lmer(mscore~as.factor(flp)+sesstd+as.factor(flp)*sesstd+(sesstd|school),
+           data=nels, REML=FALSE)
 anova(mod3b,mod3a)
 ```
 
@@ -408,9 +407,11 @@ anova(mod3a,mod1)
 
 
 ```{r step2d, cache=TRUE}
-mod3c=lmer(mscore~as.factor(flp)+sesstd+(1|school),data=nels, REML=FALSE)
-mod3d=lm(mscore~as.factor(flp)+sesstd,data=nels)
+mod3c=lmer(mscore~as.factor(flp)+sesstd+(1|school),
+           data=nels, REML=FALSE)
 anova(mod3c,mod3a) #just look at BIC here
+
+mod3d=lm(mscore~as.factor(flp)+sesstd,data=nels)
 BIC(mod3d) #check if random intercept needed by comparing to BIC from 3c
 ```
 
@@ -442,7 +443,9 @@ summary(mod3c)
 ---
 ## Model selection
 
-The more students we have eligible for the free and reduced price lunch program, the lower the math scores. In addition, the coefficient on individual-level SES did not change much in magnitude -- so SES operates both on the school level and the individual level.
+The more students we have eligible for the free and reduced price lunch program, the lower the math scores.
+
+In addition, the coefficient on individual-level SES did not change much in magnitude -- so SES operates both on the school level and the individual level.
 
 Let's now add the public school indicator.
 
@@ -463,8 +466,10 @@ anova(mod4b,mod3c)
 ## Model selection
 
 ```{r step3b, cache=TRUE}
-mod4a=lmer(mscore~as.factor(flp)+as.factor(public)+sesstd+(1|school),data=nels, REML=FALSE)
-mod4b=lmer(mscore~as.factor(flp)+as.factor(public) + sesstd+as.factor(public)*sesstd+(1|school),data=nels, REML=FALSE)
+mod4a=lmer(mscore~as.factor(flp)+as.factor(public)+sesstd+(1|school),
+           data=nels, REML=FALSE)
+mod4b=lmer(mscore~as.factor(flp)+as.factor(public) + sesstd+
+             as.factor(public)*sesstd+(1|school),data=nels, REML=FALSE)
 anova(mod4b,mod4a)
 ```
 
@@ -533,8 +538,20 @@ BIC suggests leaving urbanicity out of the model.
   - The lower the SES status of the whole school (measured by percent eligible for free and reduced-price lunch), the lower the math scores on average
   - Having higher individual-level SES was associated with higher math scores regardless of the school environment
   - A random intercept for school explained significant variability across schools and controlled for lack of independence within schools
-$$y_{ij}=\beta_{0,j}+\beta_{1,j}\text{ses}_{ij}+ \varepsilon_{ij}$$
-$$\beta_{0,j}=\beta_0+\psi_{0,l}I(\text{flp}_j=l)+b_{0,j} ~~~~~~ \beta_{1,j}=\beta_1$$ $$b_{0,j} \sim N \left( 0 ,\tau^2 \right) ~~~ \varepsilon_{ij}\sim N(0,\sigma^2)$$
+$$y_{ij}=\beta_{0,j}+\beta_{1}\text{ses}_{ij}+ \varepsilon_{ij}$$
+$$\beta_{0,j}=\beta_0+\psi_{0,l}I(\text{flp}_j=l)+b_{0,j}$$
+$$b_{0,j} \sim N \left( 0 ,\tau^2 \right) ~~~ \varepsilon_{ij}\sim N(0,\sigma^2)$$
+
+
+---
+## Final model again
+
+.large[
+```{r}
+summary(mod3c)
+```
+]
+
 
 
 
