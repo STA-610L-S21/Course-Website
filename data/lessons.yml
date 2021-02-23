@@ -216,11 +216,11 @@ lessons:
   
   
   - date: "Wed, Mar 17"
-    title: "Case Study I Presentations"
+    title: "Case Study I Presentations (Part I)"
     
     
   - date: "Fri, Mar 19"
-    title: "Case Study I Presentations"
+    title: "Case Study I Presentations (Part II); Crossed/non-nested random effect (Part I)"
     
     
     
@@ -230,7 +230,7 @@ lessons:
     #lab: "lab-07-.html"
     
   - date: "Wed, Mar 24"
-    title: "Crossed/non-nested random effects; Case Study II"
+    title: "Crossed/non-nested random effects (Part II); Case Study II"
     
   - date: "DELIVERABLES:"
     title: "Homework 3 due!"
