@@ -156,6 +156,10 @@ lessons:
     date: "Mon, Feb 22"
     title: "Lab 5: Do more beautiful professors get higher evaluations? (Part I)"
     lab: "lab-05.html"
+  
+  - date: "Tue, Feb 23 | NEW ASSIGNMENT:"
+    title: "Case Study I"
+    project: "case-study-I.html"
     
   - date: "Wed, Feb 24"
     title: "Exam review"
