@@ -174,8 +174,7 @@ lessons:
     
   - week: "WEEK 7"
     date: "Mon, Mar 1"
-    title: "Lab 6: "
-    #lab: "lab-06-.html"
+    title: "No lab"
     
     
   - title: " " 
@@ -230,8 +229,8 @@ lessons:
     
   - week: "WEEK 10"
     date: "Mon, Mar 22"
-    title: "Lab 7: "
-    #lab: "lab-07-.html"
+    title: "Lab 6: "
+    #lab: "lab-06.html"
     
   - date: "Wed, Mar 24"
     title: "Crossed/non-nested random effects (Part II); Case Study II"
@@ -246,8 +245,8 @@ lessons:
     
   - week: "WEEK 11"
     date: "Mon, Mar 29"
-    title: "Lab 8: "
-    #lab: "lab-08-.html"
+    title: "Lab 7: "
+    #lab: "lab-07.html"
     
   - date: "Wed, Mar 31"
     title: "Measurement error"
@@ -263,8 +262,8 @@ lessons:
     
   - week: "WEEK 12"
     date: "Mon, Apr 5"
-    title: "Lab 9: "
-    #lab: "lab-09-.html"
+    title: "Lab 8: "
+    #lab: "lab-08.html"
     
   
   - date: "Wed, Apr 7"
