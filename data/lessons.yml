@@ -183,10 +183,10 @@ lessons:
     
     
   - date: "Wed, Mar 3"
-    title: "Linear mixed effects models"
+    title: "Linear mixed effects models (model, diagnostics and influence measures)"
   
   - date: "Fri, Mar 5"
-    title: "Diagnostics and influence measures"
+    title: "Bayesian linear mixed effects model for longitudinal data"
     
     
     
@@ -196,7 +196,7 @@ lessons:
     
     
   - date: "Wed, Mar 10"
-    title: "Bayesian linear mixed effects model for longitudinal data"
+    title: "No class"
     
     
   - title: " " 
