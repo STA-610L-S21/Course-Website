@@ -194,8 +194,10 @@ lessons:
     slidespdf: "3-2-linear-mixed-effects-models-diagnostics.pdf"
   
   - date: "Fri, Mar 5"
-    title: "Bayesian linear mixed effects model for longitudinal data"
-    #reading: "3-1-reading.html"
+    title: "Module 3.3: Bayesian linear mixed effects models"
+    #reading: "3-3-reading.html"
+    slides: "3-3-Bayesian-linear-mixed-effects-models.html"
+    slidespdf: "3-3-Bayesian-linear-mixed-effects-models.pdf"
     
     
     
