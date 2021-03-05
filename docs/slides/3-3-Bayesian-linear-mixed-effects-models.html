@@ -304,14 +304,76 @@ For more information on the LKJ prior, see [here](https://distribution-explorer.
 
 
 
+
 ---
-## Short activity!
+## LKJ prior
 
-Plot the LKJ density for a given correlation (unnormalized is ok) for a variety of values of the shape parameter `\(\eta\)` (positive scalar).
+Lets look at the LKJ density for a for a variety of values of the shape parameter `\(\eta\)` (positive scalar).
 
-&lt;br&gt;
+First, some code for a bunch of colors.
 
-You may find [this link](https://www.rdocumentation.org/packages/rethinking/versions/1.59/topics/dlkjcorr) quite useful along with [instructions for installing the rethinking package](http://xcelab.net/R/rethinking_package.pdf).
+
+```r
+#ok, McElreath has a thing for colors, so here's his choice of color library
+# devtools::install_github("EdwinTh/dutchmasters")
+#library(dutchmasters)
+theme_pearl_earring &lt;-
+  theme(text       = element_text(color = "#E8DCCF", family = "Courier"),
+        strip.text = element_text(color = "#E8DCCF", family = "Courier"),
+        axis.text  = element_text(color = "#E8DCCF"),
+        axis.ticks = element_line(color = "#E8DCCF"),
+        line       = element_line(color = "#E8DCCF"),
+        plot.background   = element_rect(fill = "#100F14", color = "transparent"),
+        panel.background  = element_rect(fill = "#100F14", color = "#E8DCCF"),
+        strip.background  = element_rect(fill = "#100F14", color = "transparent"),
+        panel.grid = element_blank(),
+        legend.background = element_rect(fill = "#100F14", color = "transparent"),
+        legend.key        = element_rect(fill = "#100F14", color = "transparent"),
+        axis.line = element_blank())
+```
+
+
+
+---
+## LKJ prior
+
+Now, the actual code for the densities.
+
+
+```r
+#library(rethinking)
+n_sim &lt;- 1e5
+set.seed(13)
+
+r_1 &lt;- rlkjcorr(n_sim, K = 2, eta = 1) %&gt;%
+  as_tibble()
+r_2 &lt;- rlkjcorr(n_sim, K = 2, eta = 2) %&gt;%
+  as_tibble()
+r_4 &lt;- rlkjcorr(n_sim, K = 2, eta = 4) %&gt;%
+  as_tibble()
+
+ggplot(data = r_1, aes(x = V2)) +
+  geom_density(color = "transparent", fill = "#DCA258", alpha = 2/3) +
+  geom_density(data = r_2,
+               color = "transparent", fill = "#FCF9F0", alpha = 2/3) +
+  geom_density(data = r_4,
+               color = "transparent", fill = "#394165", alpha = 2/3) +
+  geom_text(data = tibble(x     = c(.83, .62, .46),
+                          y     = c(.54, .74, 1),
+                          label = c("eta = 1", "eta = 2", "eta = 4")),
+            aes(x = x, y = y, label = label),
+            color = "#A65141", family = "Courier") +
+  scale_y_continuous(NULL, breaks = NULL) +
+  xlab("correlation") +
+  theme_pearl_earring
+```
+
+
+
+---
+## LKJ prior
+
+&lt;img src="3-3-Bayesian-linear-mixed-effects-models_files/figure-html/upprior2-1.png" style="display: block; margin: auto;" /&gt;
 
 
 
@@ -431,16 +493,6 @@ head(vary_effects)
 
 
 
----
-## Data
-
-OK, so now we've simulated the cafe-specific intercepts and slopes!
-
-This next block of code adds a pretty set of colors.
-
-
-
-
 ```r
 #plot of cafe-specific intercepts and slopes
 vary_effects %&gt;% 
@@ -491,56 +543,6 @@ d %&gt;%
 ## 5     1   2.92 -0.865     5         0  2.92  3.49
 ## 6     1   2.92 -0.865     6         1  2.05  2.26
 ```
-
-
-
----
-## Prior
-
-First, let's look at that prior for `\(\Upsilon\)`.
-
-
-```r
-#library(rethinking)
-n_sim &lt;- 1e5
-
-set.seed(13)
-r_1 &lt;- 
-  rlkjcorr(n_sim, K = 2, eta = 1) %&gt;%
-  as_tibble()
-
-r_2 &lt;- 
-  rlkjcorr(n_sim, K = 2, eta = 2) %&gt;%
-  as_tibble()
-
-r_4 &lt;- 
-  rlkjcorr(n_sim, K = 2, eta = 4) %&gt;%
-  as_tibble()
-
-ggplot(data = r_1, aes(x = V2)) +
-  geom_density(color = "transparent", fill = "#DCA258", alpha = 2/3) +
-  geom_density(data = r_2,
-               color = "transparent", fill = "#FCF9F0", alpha = 2/3) +
-  geom_density(data = r_4,
-               color = "transparent", fill = "#394165", alpha = 2/3) +
-  geom_text(data = tibble(x     = c(.83, .62, .46),
-                          y     = c(.54, .74, 1),
-                          label = c("eta = 1", "eta = 2", "eta = 4")),
-            aes(x = x, y = y, label = label),
-            color = "#A65141", family = "Courier") +
-  scale_y_continuous(NULL, breaks = NULL) +
-  xlab("correlation") +
-  theme_pearl_earring
-```
-
-
-
----
-## Prior
-
-
-&lt;img src="3-3-Bayesian-linear-mixed-effects-models_files/figure-html/upprior2-1.png" style="display: block; margin: auto;" /&gt;
-
 
 
 ---
