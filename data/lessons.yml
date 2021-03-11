@@ -216,7 +216,9 @@ lessons:
   
     
   - date: "Fri, Mar 12"
-    title: "Genealized linear mixed effects models"
+    title: "Module 4.1: Genealized linear mixed effects models (Part I)"
+    slides: "4-1-generalized-linear-mixed-effects-models.html"
+    slidespdf: "4-1-generalized-linear-mixed-effects-models.pdf"
     
   - date: "NEW ASSIGNMENT:"
     title: "Homework 3"
@@ -234,7 +236,7 @@ lessons:
     
     
   - date: "Fri, Mar 19"
-    title: "Case Study I Presentations (Part II); Crossed/non-nested random effect (Part I)"
+    title: "Case Study I Presentations (Part II) | Module 4.2: Genealized linear mixed effects models (Part II)"
     
     
     
@@ -244,7 +246,7 @@ lessons:
     #lab: "lab-06.html"
     
   - date: "Wed, Mar 24"
-    title: "Crossed/non-nested random effects (Part II); Case Study II"
+    title: "Crossed/non-nested random effects; Case Study II"
     
   - date: "DELIVERABLES:"
     title: "Homework 3 due!"
